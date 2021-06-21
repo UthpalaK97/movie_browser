@@ -1,0 +1,74 @@
+<div *ngIf="!movie" class="text-center text-warning">
+    <h3>Please wait while loading ...</h3>
+</div>
+<div class="row" *ngIf="movie">
+    <div class="col-md-4">
+        <img [src]="movie.Poster" 
+        [alt]="movie.Title" 
+        class = "img img-thumbnail"
+        >
+    </div>
+    <div class="col-md-8">
+        <h3>{{ movie.Title }}</h3>
+        <h5>{{ movie.Year }}</h5>
+        <p>{{ movie.Genre }}</p>
+        <p>{{ movie.Rated}}</p>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>IMDB Rating</td>
+                    <td>{{ movie.imdbRating}}</td>
+                </tr>
+                
+                <tr>
+                    <td>Plot</td>
+                    <td>{{ movie.Plot}}</td>
+                </tr>
+                <tr>
+                    <td>Language</td>
+                    <td>{{ movie.Language }}</td>
+                </tr>
+                <tr>
+                    <td>Actors</td>
+                    <td>{{ movie.Actors }}</td>
+                </tr>
+                <tr>
+                    <td>Released</td>
+                    <td>{{ movie.Released}}</td>
+                </tr>
+                <tr>
+                    <td>Runtime</td>
+                    <td>{{ movie.Runtime}}</td>
+                </tr>
+                <tr>
+                    <td>Director</td>
+                    <td>{{ movie.Director}}</td>
+                </tr>
+                <tr>
+                    <td>Writer</td>
+                    <td>{{ movie.Writer}}</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>Country</td>
+                    <td>{{ movie.Country}}</td>
+                </tr>
+                <tr>
+                    <td>Awards</td>
+                    <td>{{ movie.Awards}}</td>
+                </tr>
+                <tr>
+                    <td>Production</td>
+                    <td>{{ movie.Production}}</td>
+                </tr>
+                
+            </tbody>
+
+        </table>
+       
+           <button class="btn btn-primary" (click)="goBack()">Back</button>
+           
+       </div> 
+    
+</div>
